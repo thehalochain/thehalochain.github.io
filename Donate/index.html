@@ -10,7 +10,7 @@
 
     <body>
         <div class="top-container">
-            <img src="../images/HaloChain.jpg" id="logo">
+            <a href= "../index.html"><img src="../images/HaloChain.jpg" id="logo"></a>
         </div>
         <!--
         <div class="header" id="myHeader">
@@ -23,12 +23,11 @@
     -->
 
         <div class="navbar">
-            <a href="../index.html">Home</a>
             <a href="../Join/index.html">Join</a>
             <div class="dropdown">
               <button class="dropbtn">About</button>
               <div class="dropdown-content">
-                <a href="../About/Officers/index.html">Officers</a>
+                <a href="../About/Officers/index.html">Our Team</a>
                 <a href="../About/Projects/index.html">Projects</a>
                 <a href="../About/Partners/index.html">Partners</a>
               </div>
@@ -41,7 +40,18 @@
 
         <div class="content">
             <h2>Donate Content</h2>
-            <p id="ms">block text</p>
+            <p id="ms">Our organization works to uplift children across Texas and achieve our goals solely with donation-based funds. We are extremely fortunate to work with generous donors who help us bring light to outstanding children and their families. If you would like to make a gift to our organization, </p>
+            <!-- Set up a container element for the button -->
+            <div id="paypal-button-container"></div>
+
+            <!-- Include the PayPal JavaScript SDK. Replace `YOUR_CLIENT_ID` with your client ID.-->
+            <!-- Note that `enable-funding=venmo` is added as a query parameter -->
+            <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&enable-funding=venmo"></script>
+
+            <script>
+            // Render the Venmo button into #paypal-button-container
+            paypal.Buttons().render('#paypal-button-container')
+            </script>
         </div>
 
         <div id="buffer2"></div>
